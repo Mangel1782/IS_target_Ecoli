@@ -6,20 +6,10 @@ import os
 
 if __name__ == "__main__":
 
-
     os.mkdir("genomes_dir")
-
     main_dir = os.getcwd() + "/genomes_dir/"
-    print(main_dir)
-
-    genome_bank_file = "/home/mike/Documents/Genomes_execution/FTP_downloads/prokaryotes_12_20_2020.csv"
-
-
+    genome_bank_file = os.getcwd() + "/prokaryotes_12_20_2020.csv"
     path_to_model = os.getcwd() + "/estimator_p.sav"
-    #path_to_model = "/home/mike/Documents/Genomes_execution/model_saved/estimator_p.sav"
-
-
-
 
     GS = genomeScraper()
     PG = processGenomes()
