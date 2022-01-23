@@ -3,6 +3,7 @@ import pandas as pd
 from time import time
 from datetime import timedelta
 import pickle
+#import sklearn
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
@@ -25,11 +26,11 @@ class runClassifier():
         # Add class
         sequence_to_classify["predicted"] = model.predict(sequence_to_classify.sequence)
 
-        # add probabilites
+        # add probabilities
         probabilities = model.predict_proba(sequence_to_classify.sequence)
         sequence_to_classify["IS_probability"] = probabilities[:, 1]
 
-        # add anotation
+        # add annotation
         sequence_to_classify['annotation'] = sequence_to_classify["description"].str.split(" ").str[1]
         sequence_to_classify = sequence_to_classify[[x for x in sequence_to_classify.columns
                                                      if x not in ["Unnamed: 0"]]]
