@@ -2,6 +2,7 @@
 Machine Learning estimator for bacterial insertion sequences predictions on Escherichia coli.
 
 
+
 ## This software has the capability to identify bacterial insertion sequences. 
 
 The software architecture may be divided in three general instances
@@ -30,5 +31,17 @@ The last step consists in producing the overall report on the genome
 Although a specific report is yielded on each genome strain while the classifier is being executed, a global report is then computed in order to be able to quantify the performance of the classification process.
 The global report consists of central tendency measures, median, mean, standard deviation of Accuracy, Sensitivity and Specificity.
 
+
+# How to execute the software ?
+Please, follow the step described below.
+
+step 1: to create an environment
+$ conda create --  name [env_name] python=3
+step 2: installing requirements
+$ pip install -r requirements.txt
+step 3: to check environment set up
+$ python environment_test.py
+step 4: executing software via the “orchestrator” module
+$ python orchestrator.py 
 
 
