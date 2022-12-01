@@ -1,4 +1,4 @@
-# IS_target_Ecoli
+# IS_target
 Machine Learning estimator for bacterial insertion sequences predictions on Escherichia coli.
 
 
